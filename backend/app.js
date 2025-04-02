@@ -974,8 +974,8 @@ PDF Content: ${text}`;
     const outputPath = path.join(outputDir, outputFilename);
 
     // Voice mapping for AWS Polly (neural voices)
-    const hostAVoice = "Joanna"; // Female voice for Ashley (main host)
-    const hostBVoice = "Matthew"; // Male voice for Ric
+    const hostAVoice = "Danielle"; // Female voice for Ashley (main host)
+    const hostBVoice = "Stephen"; // Male voice for Ric
 
     // Process each line with the appropriate voice
     for (let i = 0; i < lines.length; i++) {
@@ -1011,7 +1011,7 @@ PDF Content: ${text}`;
       console.log(`Processing line ${i + 1}/${lines.length} with ${voice}...`);
 
       // Use AWS Polly to synthesize speech
-      const success = await synthesizeSpeech(text, voice, tempFile, "standard");
+      const success = await synthesizeSpeech(text, voice, tempFile, "generative");
 
       if (success) {
         audioSegments.push(tempFile);
