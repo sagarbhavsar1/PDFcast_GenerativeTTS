@@ -980,6 +980,7 @@ PDF Content: ${text}`;
     // Process each line with the appropriate voice
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
+
       if (!line.trim()) continue;
 
       // Extract speaker and text - FIX: Only split at the first colon when it follows a host pattern
